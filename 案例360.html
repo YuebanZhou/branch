@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+    body {
+        margin: 0;
+        padding: 0;
+    }
+    .section {
+        position: relative;
+        overflow: hidden;
+    }
+    /*第一屏*/
+    .one {
+        text-align: center;
+    }
+    .one .logo {
+        margin: 80px;
+    }
+    .one .text img {
+        margin: 0 34px;
+        opacity: 0.3;
+    }
+    .one .extra {
+        margin-top: 80px;
+    }
+    .one.current .text img {
+        margin: 0 5px;
+        opacity: 1;
+        transition: all 0.5s ease-in;
+    }
+    /*第二屏*/
+    .two {
+        position: relative;
+    }
+    .two .shield {
+        width: 420px;
+        position: absolute;
+        left: 90px;
+        top: 90px;
+    }
+    .two .shield img {
+        transform: rotateZ(76deg) translate(10px,20px);
+    }
+    .two .extra {
+        position: absolute;
+        right: 90px;
+        top: 110px;
+    }
+    .two.current .shield img {
+        transform: none;
+        transition: all 0.5s ease-out;
+    }
+    /*第三屏*/
+    .three {
+        position: relative;
+    }
+    .three img {
+        position: absolute;
+    }
+    .three .extra img {
+        left: 90px;
+        top: 90px;
+    }
+    .three .circle img {
+        right: 90px;
+        top: 90px;
+    }
+    .three .rocket img {
+            /*top: 120%;
+            right: 120%;*/
+            top: 220px;
+            right: 220px;
+            transform: translateX(-500px) translateY(500px);
+        }
+        .three.current .rocket img {
+           transform: none;
+           transition: all 0.5s ease-in;
+       }
+       /*第四屏*/
+       .four {
+        position: relative;
+    }
+    .four .extra img {
+        position: absolute;
+        top: 90px;
+        right: 90px;
+    }
+    .four .search {
+        width: 529px;
+        height: 480px;
+        /*background-color: red;*/
+        position: absolute;
+        top: 90px;
+        left: 90px;
+    }
+    .four .search .tool {
+        width: 529px;
+        height: 66px;
+        transform: translateX(-120%);
+    }
+    .four .search .words {
+        width: 0;
+        height: 22px;
+        position: absolute;
+        top: 24px;
+        left: 20px;
+        background: url("img/key.png") left center no-repeat;
+    }
+    .four .search .pic {
+        width: 529px;
+        height: 327px;
+        overflow: hidden;
+        margin-top: -10px;
+    }
+    .four .search .pic img {
+        transform: translateY(-100%);
+    }
+    .four.current .tool{
+        transform: none;
+        transition: all 0.5s linear;
+    }
+    .four.current .words {
+        animation: move 1s steps(5) forwards 1.5s;
+    }
+    .four.current .pic img{
+        transform: none;
+        transition: all 1s ease-in-out 2.5s;
+    }
+    @keyframes move {
+        0%{
+        }
+        100% {
+            width: 105px;
+        }
+    }
+    /*第五屏*/
+    .five div {
+        display: flex;
+        flex-direction: column;
+    }
+    .five .extra {
+        margin: 0 auto;
+        width: 1077px;
+        height: 143px;
+    }
+    .five .block {
+        width: 1004px;
+        flex: 1;
+        margin: 0 auto;
+        background-color: rgba(255,255,255,.3);
+        position: relative;
+    }
+    .five .block .left,
+    .five .block .top,
+    .five .block .right,
+    .five .block .bottom{
+        position: absolute;
+        background-color: #fff;
+    }
+    .five .block .left,
+    .five .block .right{
+        width: 1px;
+        height: 100%;
+        top: 0;
+    }
+    .five .block .top,
+    .five .block .bottom{
+        height: 1px;
+        width: 100%;
+        left: 0;
+    }
+    .five .block .left {
+        left: 0;
+        transform: translateY(-100%);
+    }
+    .five .block .right {
+        right: 0;
+        transform: translateY(100%);
+    }
+    .five .block .top {
+        top: 0;
+        transform: translateX(100%);
+    }
+    .five .block .bottom {
+        bottom: 0;
+    }
+    .five .block .bar {
+        opacity: 0;
+    }
+    .five .block .wrap {
+        width: 0;
+        height: 28px;
+        position: absolute;
+        left: 72px;
+        top: 30px;
+        overflow: hidden;
+    }
+    .five .block .box {
+        width: 916px;
+        height: 26px;
+        border: 1px solid #fff;
+        border-radius: 5px;
+    }
+    .five .block .task {
+        width: 100%;
+        height: 29px;
+        position: absolute;
+        bottom: 0;
+        background: url("img/extra.png") right no-repeat;
+    }
+    .five .block .line {
+        width: 100%;
+        height: 2px;
+        background-color: #FFF;
+        position: absolute;
+        bottom: 30px;
+    }
+
+    .five.current .left {
+        transform: none;
+        transition: all 1s ease-in-out;
+    }
+
+    .five.current .top {
+        transform: none;
+        transition: all 1s ease-in-out;
+    }
+
+    .five.current .right {
+        transform: none;
+        transition: all 1s ease-in-out;
+    }
+
+    .five.current .bottom {
+        transform: none;
+        transition: all 1s ease-in-out;
+    }
+
+    .five.current .bar {
+        opacity: 1;
+        transition: all 1s ease-in-out 1s;
+    }
+
+    .five.current .block .wrap {
+        width: 920px;
+        transition: all 1s ease-in-out 2s;
+    }
+</style>
+</head>
+<body>
+    <div id="fullpage">
+        <div class="section one">
+            <div class="logo"><img src="img/logo.png" alt=""/></div>
+            <div class="text">
+                <img src="img/text_1.png" alt=""/>
+                <img src="img/text_2.png" alt=""/>
+                <img src="img/text_3.png" alt=""/>
+                <img src="img/text_4.png" alt=""/>
+                <img src="img/text_5.png" alt=""/>
+                <img src="img/text_6.png" alt=""/>
+                <img src="img/text_7.png" alt=""/>
+                <img src="img/text_8.png" alt=""/>
+            </div>
+            <div class="extra"><img src="img/info_1.png" alt=""/></div>
+        </div>
+        <div class="section two">
+            <div class="shield">
+                <img src="img/shield_1.png" alt=""/>
+                <img src="img/shield_2.png" alt=""/>
+                <img src="img/shield_3.png" alt=""/>
+                <img src="img/shield_4.png" alt=""/>
+                <img src="img/shield_5.png" alt=""/>
+                <img src="img/shield_6.png" alt=""/>
+                <img src="img/shield_7.png" alt=""/>
+                <img src="img/shield_8.png" alt=""/>
+                <img src="img/shield_9.png" alt=""/>
+            </div>
+            <div class="extra"><img src="img/info_2.png" alt=""/></div>
+        </div>
+        <div class="section three">
+            <div class="extra"><img src="img/info_3.png" alt=""/></div>
+            <div class="circle"><img src="img/circle.png" alt=""/></div>
+            <div class="rocket"><img src="img/rocket.png" alt=""/></div>
+        </div>
+        <div class="section four">
+            <div class="search">
+                <div class="tool"><img src="img/search.png" alt=""/></div>
+                <div class="words"></div>
+                <div class="pic"><img src="img/result.png" alt=""/></div>
+            </div>
+            <div class="extra"><img src="img/info_4.png" alt=""/></div>
+        </div>
+        <div class="section five active">
+            <div class="extra"><img src="img/info_5.png" alt=""/></div>
+            <div class="block">
+                <div class="left"></div>
+                <div class="right"></div>
+                <div class="top"></div>
+                <div class="bottom"></div>
+                <div class="bar"><img src="img/toolbar.png" alt=""/></div>
+                <div class="wrap">
+                    <div class="box"></div>
+                </div>
+                <div class="task"></div>
+                <div class="line"></div>
+            </div>
+        </div>
+    </div>
+    <script src="js/jquery-1.8.3.min.js"></script>
+    <script src="js/jquery.fullPage1.min.js"></script>
+    <script>
+        $(function () {
+            $("#fullpage").fullpage({
+                sectionsColor: ["#0da5d6", "#2ab561", "#de8910", "#16ba9d", "#0da5d6"],
+                afterLoad: function (link, index) {
+                    $(".section").removeClass("current");
+                    setTimeout(function () {
+                        $(".section").eq(index - 1).addClass("current");
+                    }, 100);
+                }
+            });
+        });
+    </script>
+</body>
+</html>

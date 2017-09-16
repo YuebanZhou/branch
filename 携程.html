@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+        html,body {
+            width: 100%;
+            height: 100%;
+        }
+        img {
+            width: 100%;
+            display: block;
+        }
+        .center {
+            padding: 0 5px;
+        }
+        .center .list{
+            margin-top: 5px;
+            border-radius: 5px;
+            background-color: #00b0e0;
+            display: flex;
+        }
+        .center .list .left {
+            flex: 1;
+            /*background-color: pink;*/
+        }
+        .center .list .right {
+            flex: 2;
+            /*background-color: red;*/
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .center .list .right a {
+            text-align: center;
+            width: 50%;
+            height: 45px;
+            line-height: 45px;
+            border-left: 1px solid #ccc;
+            border-bottom: 1px solid #ccc;
+            box-sizing: border-box;
+        }
+        .center .list .right a:nth-child(3) {
+            border-bottom: none;
+        }
+        .center .list .right a:nth-child(4) {
+            border-bottom: none;
+        }
+        .center .list:nth-child(4) .right a {
+            width: 33.3%;
+            border-left: 1px solid #ccc;
+            border-bottom: 1px solid #ccc;
+        }
+        .center .list:nth-child(4) .right a:nth-child(1) {
+            border-left: none;
+        }
+        .center .list:nth-child(4) .right a:nth-child(4) {
+            border-bottom: none;
+            border-left: none;
+        }
+        .center .list:nth-child(4) .right a:nth-child(5) {
+            border-bottom: none;
+        }
+        .center .list:nth-child(4) .right a:nth-child(6) {
+            border-bottom: none;
+        }
+        .pic {
+            /*width: 100%;*/
+            display: flex;
+        }
+        .pic a {
+            flex: 1;
+        }
+        .nav,.word {
+            display: flex;
+        }
+        .nav a,.word a {
+            flex: 1;
+            height: 44px;
+            text-align: center;
+            line-height: 44px;
+            color: #333;
+            font-size: 12px;
+            border-top: 1px solid #ccc;
+            border-bottom: 1px solid #ccc;
+            box-sizing: border-box;
+        }
+        .word a {
+            border-top: none;
+            border-bottom: none;
+        }
+        .bottom p {
+            text-align: center;
+            font-size: 14px;
+            color: #333;
+        }
+
+    </style>
+</head>
+<body>
+<div class="top">
+    <img src="img/xcbanner.jpg" alt=""/>
+</div>
+<div class="center">
+    <div class="list">
+        <div class="left"></div>
+        <div class="right">
+            <a href="#">酒店入住</a>
+            <a href="#">酒店入住</a>
+            <a href="#">酒店入住</a>
+            <a href="#">酒店入住</a>
+        </div>
+    </div>
+    <div class="list">
+        <div class="left"></div>
+        <div class="right">
+            <a href="#">酒店入住</a>
+            <a href="#">酒店入住</a>
+            <a href="#">酒店入住</a>
+            <a href="#">酒店入住</a>
+        </div>
+    </div>
+    <div class="list">
+        <div class="left"></div>
+        <div class="right">
+            <a href="#">酒店入住</a>
+            <a href="#">酒店入住</a>
+            <a href="#">酒店入住</a>
+            <a href="#">酒店入住</a>
+        </div>
+    </div>
+    <div class="list">
+        <div class="right">
+            <a href="#">酒店入住</a>
+            <a href="#">酒店入住</a>
+            <a href="#">酒店入住</a>
+            <a href="#">酒店入住</a>
+            <a href="#">酒店入住</a>
+            <a href="#">酒店入住</a>
+        </div>
+    </div>
+
+</div>
+<div class="bottom">
+    <div class="pic">
+        <a href="#"><img src="img/xcextra_1.png" alt=""/></a>
+        <a href="#"><img src="img/xcextra_2.png" alt=""/></a>
+    </div>
+    <div class="nav">
+        <a href="#">电话预定</a>
+        <a href="#">下载客户端</a>
+        <a href="#">我的</a>
+    </div>
+    <div class="word">
+        <a href="#">网站地图</a>
+        <a href="#">ENGLISH</a>
+        <a href="#">电脑版</a>
+    </div>
+    <p>&copy; 2015 携程旅行</p>
+</div>
+</body>
+</html>
