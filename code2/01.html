@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>
+    Document
+  </title>
+  <script type="text/javascript">
+  /*
+  what?
+  版本控制工具git
+  why?
+  方便、高效
+  how?
+
+  git相关概念：
+  3种工作区域：工作目录、暂存区、本地仓库
+  4种文件状态：未跟踪、已暂存、已提交、已修改
+
+  使用git的基本流程：
+  1、新项目
+  操作流程：
+  1）配置用户信息
+  git config --global user.name 用户名
+  git config --global user.email 邮箱
+  2）初始化本地仓库
+  git init
+  3）把项目文件纳入git的管理（把工作目录中的文件添加到暂存区）
+  git add 文件列表
+  4）提交代码（把暂存区的代码添加到本地仓库中）
+  git commit -m 备注
+  5）查看文件的状态
+  git status
+
+  2、已有项目
+
+  ------------------------------------------------------
+  回滚操作
+
+  查看所有的提交快照
+  git log
+
+  git reset 
+      --hard 回滚本地仓库的快照；使用本地仓库的快照覆盖暂存区；使用本地仓库的快照覆盖工作目录
+      --soft 只回滚本地仓库的快照
+      --mixed(默认) 回滚本地仓库的快照并且覆盖暂存区，但是不覆盖工作目录
+  
+  HEAD表示本地仓库的最新快照
+  ^表示上一次快照
+
+  回滚最后一次提交(取消最后一次提交)
+  git reset --hard HEAD^
+  git reset --hard 倒数第二个commitID
+  -------------------------------------------
+  git add 的逆操作：
+
+  git reset --mixed HEAD
+  git reset HEAD
+  git reset 最后一次commitID
+
+  git rm --cached 文件列表
+  --------------------------------------------
+
+  回滚所有的修改操作（用暂存区覆盖工作目录）
+  git checkout 文件列表
+  git checkout .
+
+  ----------------------------------------------
+  分支
+
+  查看分支
+  git branch
+
+  创建分支
+  git branch 分支名称
+
+  切换分支
+  git checkout 分支名称
+
+  创建并切换分支
+  git checkout -b 分支名称
+
+  合并分支
+  git merge 分支名称（来源分支）
+
+  删除分支
+  git branch -d 分支名称（分支必须被合并过之后才能删除，否则删不掉）
+  git branch -D 分支名称（强制删除分支）
+
+-----------------------------------------------------
+
+  第一次获取代码一般使用如下命令：
+  git clone 远程仓库的地址 项目名称（可选的）
+
+  远程仓库操作
+  上传代码
+  git push 远程仓库的地址 本地分支名称:远程分支的名称
+  git push 远程仓库的地址 本地分支名称
+
+  下载代码
+  git pull 远程仓库的地址 远程分支的名称:本地分支的名称
+  git pull 远程仓库的地址 远程分支的名称
+
+
+
+
+
+
+
+
+
+  */
+</script>
+</head>
+<body>
+ <div class="mod">
+  <p>haha</p>
+  <p>haha</p>
+</div>
+</body>
+</html>
